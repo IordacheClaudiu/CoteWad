@@ -1,3 +1,10 @@
+<script type="text/javascript">
+	
+	var chat_id="<?php echo $chat_id?>";
+	var user_id="<?php echo $user_id?>";
+	var 	
+	
+</script>
 <style type="text/css">
 	div#chat_viewport{
 		min-height: 500px;

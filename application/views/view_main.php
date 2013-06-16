@@ -5,6 +5,10 @@
 	<script text="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 	<script text="text/javascript" src="<?php echo base_url() . 'public/';?>chat.js"></script>
 	
+	<script type="text/javascript">
+		var base_url = "<?php echo base_url();?>";
+	</script>
+	
 	<style type="text/css">
 		body {
 			background-color: #fff;
