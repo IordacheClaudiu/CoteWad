@@ -1,6 +1,17 @@
+body{
+	background-color:#8b8989;
+	margin:0;
+	font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size:13px;
+	font-weight:normal;
+	line-height:18px;
+	color:#404040;
+}
+
 textarea{
 float:right;
-width: 900px;
+margin-right:20px;
+margin-top:80px;
 border:2px solid #CCCCCC;
 border-radius: 10px;
 -webkit-border-radius: 10px;
@@ -8,4 +19,49 @@ border-radius: 10px;
 box-shadow: 10px 10px 5px #888888;
 -webkit-box-shadow: 10px 10px 5px #888888;
 -moz-box-shadow: 10px 10px 5px #888888;
+  min-width: 70%;
+  min-height: 500px;
+  max-width: 70%;
+  max-height: 500px;
+}
+
+.topbar{height:40px;position:fixed;top:0;left:0;right:0;z-index:10000;overflow:visible; background-color:#222222;}
+.topbar h1{display:block;float:left;position:relative;font-weight:bold;color:#bfbfbf;font-size:20px;margin-left: 10px; margin-top: 2px;}
+.top-container{width:80%;margin-left:auto;margin-right:auto;zoom:1;margin-top: 10px;}
+.menu{float:right;margin-left:10px;}
+
+.docviewer{min-width:20%; max-width:20%; float:left; margin-top: 80px; margin-left: 20px; background-color: #8b8989; overflow: visible; border-style:solid;border-color:#222222; border-radius: 7px;}
+.docviewer a{color:#222222;text-shadow:0 -1px 0 rgba(0, 0, 0, 0.25); position: relative; padding-left: 15px; padding-right: 15px;}
+.docviewer p{color:#222222;text-shadow:0 -1px 0 rgba(0, 0, 0, 0.25); position: relative; padding-left: 15px; padding-right: 15px;}
+
+#undoButton, #redoButton, #saveButton{
+	background-color:#222222;
+	border-style:solid;
+	border-color:#222222; 
+	border-radius: 5px;
+	color:#8b8989;
+}
+
+#logoutButton, #githubButton{
+	background-color:#bfbfbf;
+	border-style:solid;
+	border-color:#bfbfbf; 
+	border-radius: 5px;
+	color:#222222;
+	float:right;
+	margin-right:10px;
+}
+
+#canvas{
+	width=300; 
+	height=40;
+	vertical-align:middle;
+}
+
+.bottom-container{
+	float:right;
+	margin-right:20px;
+	margin-top:20px;
+	min-width: 70%;
+	max-width: 70%;
 }

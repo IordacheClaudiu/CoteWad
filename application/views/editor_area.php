@@ -2,6 +2,7 @@
 "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
+	
   <title>CoteWad</title>
   <meta http-equiv="X-UA-Compatible" content="IE=9">
 
@@ -13,24 +14,41 @@
   <script type="text/javascript"
           src="<?php echo base_url()?>js/realtime-client-utils.js"></script>
    <link rel="stylesheet" href="<?php echo base_url();?>css/editing_page_styles.css" type="text/css" media="screen"/>
+
 </head>
+
 
 <!-- Start Realtime when the body has loaded. -->
 <body onLoad='startRealtime()'>
 
-  <button id="authorizeButton" disabled style="display: none">You must authorize</button>
+<div class="topbar">
+        <div class="top-container">
+          <canvas id="canvas"></canvas>
+          <h1>CoteWad</h1>
+          <button id="logoutButton">Logout</button>
+          <button id="githubButton">GitHub for this App</button>  
+      </div>
+</div>
 
-  <p>These text areas are on the same page. You can also <a target="_blank" href="#">open them on separate users'
-  browsers</a> and they will remain synchronized.</p>
+<div class="docviewer">
+  <p>Aici vin toate documentele la care are acces puse cu un script php</p>
+</div>
+
+  <button id="authorizeButton" disabled style="display: none">You must authorize</button>
 
   <!-- Text area that will be used as our collaborative controls. -->
   <textarea id="editor" rows="15" cols="50" disabled="true"></textarea>
   <br />
 
+  
+  <div class="bottom-container">
   <!-- Undo and redo buttons. -->
   <button id="undoButton" disabled>Undo</button>
   <button id="redoButton" disabled>Redo</button>
-
+  <button id="saveButton">Save</button>
+  </div>
+  
+  
   <script>
     /**
      * This function is called the first time that the Realtime model is created
