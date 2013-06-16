@@ -2,9 +2,13 @@
 class Login extends CI_Controller{
 	public function index()
 	{
-		
+		$log_status=$this->session->userdata('is_logged_in');
+		if($log_status == TRUE){
+			redirect('collab/editor_area');
+		}else{
 		$data['main_content']='login_form';
 		$this->load->view('includes/template',$data);
+		}
 	}
 	public function validate_credentials(){
 		

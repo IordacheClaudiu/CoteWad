@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-  <title>Google Drive Realtime quickstart</title>
+  <title>CoteWad</title>
   <meta http-equiv="X-UA-Compatible" content="IE=9">
 
   <!-- Load the Realtime libraries. -->
@@ -11,22 +11,20 @@
 
   <!-- Load the utility library. -->
   <script type="text/javascript"
-          src="realtime-client-utils.js"></script>
+          src="<?php echo base_url()?>js/realtime-client-utils.js"></script>
+   <link rel="stylesheet" href="<?php echo base_url();?>css/editing_page_styles.css" type="text/css" media="screen"/>
 </head>
 
 <!-- Start Realtime when the body has loaded. -->
 <body onLoad='startRealtime()'>
 
-  <h1>Drive Realtime API :: quickstart</h1>
-
-  <button id="authorizeButton" disabled>You must authorize</button>
+  <button id="authorizeButton" disabled style="display: none">You must authorize</button>
 
   <p>These text areas are on the same page. You can also <a target="_blank" href="#">open them on separate users'
   browsers</a> and they will remain synchronized.</p>
 
-  <!-- Text areas that will be used as our collaborative controls. -->
-  <textarea id="editor1" rows="15" cols="50" disabled="true"></textarea>
-  <textarea id="editor2" rows="15" cols="50" disabled="true"></textarea>
+  <!-- Text area that will be used as our collaborative controls. -->
+  <textarea id="editor" rows="15" cols="50" disabled="true"></textarea>
   <br />
 
   <!-- Undo and redo buttons. -->
@@ -58,24 +56,12 @@
       var string = doc.getModel().getRoot().get('text');
 
       // Keeping one box updated with a String binder.
-      var textArea1 = document.getElementById('editor1');
+      var textArea1 = document.getElementById('editor');
       gapi.drive.realtime.databinding.bindString(string, textArea1);
 
-      // Keeping one box updated with a custom EventListener.
-      var textArea2 = document.getElementById('editor2');
-      var updateTextArea2 = function(e) {
-        textArea2.value = string;
-      };
-      string.addEventListener(gapi.drive.realtime.EventType.TEXT_INSERTED, updateTextArea2);
-      string.addEventListener(gapi.drive.realtime.EventType.TEXT_DELETED, updateTextArea2);
-      textArea2.onkeyup = function() {
-        string.setText(textArea2.value);
-      };
-      updateTextArea2();
-
-      // Enabling UI Elements.
+      // Enabling UI Element.
       textArea1.disabled = false;
-      textArea2.disabled = false;
+     
 
       // Add logic for undo button.
       var model = doc.getModel();
@@ -104,7 +90,7 @@
       /**
        * Client ID from the APIs Console.
        */
-      clientId: 'INSERT YOUR CLIENT ID HERE',
+      clientId: '1064857284588-4fp15p783tl7vb417e4dskq1jrk332ff.apps.googleusercontent.com',
 
       /**
        * The ID of the button to click to authorize. Must be a DOM element ID.
