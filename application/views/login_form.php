@@ -1,5 +1,14 @@
+<!--<div id="left_textareas">
+	<textarea cols="4" rows="10" class="textareaLogin" readonly="true">fdsjfhdskhfjkdshfdbsamfnbdamnsbfndmbafjdsbfmdbfdagsadsfndasvnfdvasnfvadsfvsjad</textarea>
+	<textarea cols="4" rows="10" class="textareaLogin" readonly="true">fdsjfhdskhfjkdshfdbsamfnbdamnsbfndmbafjdsbfmdbfdagsadsfndasvnfdvasnfvadsfvsjad</textarea>
+</div>
+<div id="right_textareas">
+	<textarea cols="4" rows="10" class="textareaLogin" readonly="true">fdsjfhdskhfjkdshfdbsamfnbdamnsbfndmbafjdsbfmdbfdagsadsfndasvnfdvasnfvadsfvsjad</textarea>
+	<textarea cols="4" rows="10" class="textareaLogin" readonly="true">fdsjfhdskhfjkdshfdbsamfnbdamnsbfndmbafjdsbfmdbfdagsadsfndasvnfdvasnfvadsfvsjad</textarea>
+</div>-->
 <div id="login_form">
 	<h1>CoteWad Login</h1>
+	
 	<?php
 	 echo form_open('login/validate_credentials');
 	 echo form_input('username','Username');

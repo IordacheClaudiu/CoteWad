@@ -23,7 +23,7 @@
 
 <div class="topbar">
         <div class="top-container">
-          <canvas id="canvas"></canvas>
+         
           <h1>CoteWad</h1>
           <button id="logoutButton">Logout</button>
           <button id="githubButton">GitHub for this App</button>  
@@ -34,7 +34,7 @@
   <p>Aici vin toate documentele la care are acces puse cu un script php</p>
 </div>
 
-  <button id="authorizeButton" disabled style="display: none">You must authorize</button>
+  <button id="authorizeButton" disabled>You must authorize</button>
 
   <!-- Text area that will be used as our collaborative controls. -->
   <textarea id="editor" rows="15" cols="50" disabled="true"></textarea>

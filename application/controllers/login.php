@@ -22,6 +22,7 @@ class Login extends CI_Controller{
 				'is_logged_in'=> TRUE
 			);
 			$this->session->set_userdata($data);
+			//$this->session->sess_expire_on_close = TRUE;
 			redirect('collab/editor_area');
 		}
 		else{

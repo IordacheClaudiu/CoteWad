@@ -9,7 +9,7 @@ class Collab extends CI_Controller{
 	}
 	function is_loggedin(){
 		$log_status=$this->session->userdata('is_logged_in');
-		if(!isset($log_status)|| $log_status!=TRUE){
+		if(!isset($log_status) || $log_status!=TRUE){
 			redirect('login');
 		}
 	}
