@@ -12,14 +12,15 @@ class Chat extends CI_Controller {
 		 */
 
 		$this -> view_data['chat_id'] = 'chat_id1';
-		
+
 		//check they are logged in
-		/*
-		if(!$this->session->userdata('is_logged_in')) {
-			redirect('index');
+
+		if (!$this -> session -> userdata('is_logged_in')) {
+			redirect('login');
 		}
-		*/
-		$this->view_data['user_id'] = $this->session->userdata('username');
+
+		$this -> view_data['user_id'] = $this -> session -> userdata('username');
+
 		$this -> view_data['page_title'] = 'Tutorial - Creating a web based chat app';
 		$this -> view_data['page_content'] = 'view_chat';
 		$this -> load -> view('view_main', $this -> view_data);
@@ -36,6 +37,7 @@ class Chat extends CI_Controller {
 		$chat_id = $this -> input -> post('chat_id');
 		$user_id = $this -> input -> post('user_id');
 		$chat_message_content = $this -> input -> post('chat_message_content', TRUE);
+
 		$this -> chat_model -> add_chat_message($chat_id, $user_id, $chat_message_content);
 
 		//grab and return all messages

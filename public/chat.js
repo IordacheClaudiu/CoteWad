@@ -7,7 +7,7 @@ $(document).ready(function() {
 			return false;
 		}
 
-		$.post(base_url + "chat/ajax_add_chat_message", {chat_message_content:chat_message_content, chat_id:chat_id, user_id:user_id}, function(data) {
+		$.post(base_url + "index.php/chat/ajax_add_chat_message", {chat_message_content : chat_message_content, chat_id : chat_id, user_id : user_id}, function(data) {
 			alert(data);
 		}, "json");
 

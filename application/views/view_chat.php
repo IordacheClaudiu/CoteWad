@@ -1,8 +1,7 @@
 <script type="text/javascript">
 	
-	var chat_id="<?php echo $chat_id?>";
-	var user_id="<?php echo $user_id?>";
-	var 	
+	var chat_id="<?php echo $chat_id;?>";
+	var user_id="<?php echo $user_id;?>";
 	
 </script>
 <style type="text/css">
@@ -15,7 +14,7 @@
 	}
 </style>
 
-<h1>let's do some chatiing</h1>
+<h1>let's do some chatting</h1>
 <div id="chat_viewport">
 	
 </div>
