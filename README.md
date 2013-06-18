@@ -13,6 +13,12 @@ In ultima perioada s-a manifestat un mare interes pentru dezvoltarea aplicatiilo
  Introducere 
 ---------------
 
+####1.1 Scurta descriere a termenul de Aplicatie Web Real-Time
+
+####1.2 Aplicatii Web Similare
+
+####1.3 Ce aduce in plus Cotewad
+
 Tehnologii folosite
 -----------------------
 
