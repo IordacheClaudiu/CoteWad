@@ -24,7 +24,9 @@ Este de dorit ca intervalul de timp sa fie cat mai scurt, sa nu depaseasca catev
 *[http://etherpad.org/](http://etherpad.org/)
 
 ####1.3 Ce aduce in plus Cotewad
-Trebuie mentionat ca pe langa baza de date relationala MySql, Cotewad mai foloseste o baza de date numita CouchDb ce face parte din familia bazelor de date NoSql si care permite stocarea datelor sub forma de documente, utilizarea sa fiind din ce in ce mai frecventa datorita nivelului de vulnerabilitate scazut
+Trebuie mentionat ca pe langa baza de date relationala MySql, Cotewad mai foloseste o baza de date numita CouchDb ce face parte din familia bazelor de date NoSql si care permite stocarea datelor sub forma de documente, utilizarea sa fiind din ce in ce mai frecventa datorita nivelului de vulnerabilitate scazut.
+
+sdadsa
 
 Tehnologii folosite
 -----------------------
