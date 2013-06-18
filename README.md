@@ -15,9 +15,16 @@ In ultima perioada s-a manifestat un mare interes pentru dezvoltarea aplicatiilo
 
 ####1.1 Scurta descriere a termenul de Aplicatie Web Real-Time
 
+O aplicatie Web se poate numi Real-Time daca ofera anumite functionalitati ce permit transferul de date de la un autor la un alt utilizator intr-un anumit interval de timp.
+Este de dorit ca intervalul de timp sa fie cat mai scurt, sa nu depaseasca cateva secunde pentru a nu disparea efectul de colaborare.
+
 ####1.2 Aplicatii Web Similare
+*[http://qikpad.co.uk/](http://qikpad.co.uk/)
+*[http://www.chatcoding.net/](http://www.chatcoding.net/)
+*[http://etherpad.org/](http://etherpad.org/)
 
 ####1.3 Ce aduce in plus Cotewad
+Trebuie mentionat ca pe langa baza de date relationala MySql, Cotewad mai foloseste o baza de date numita CouchDb ce face parte din familia bazelor de date NoSql si care permite stocarea datelor sub forma de documente, utilizarea sa fiind din ce in ce mai frecventa datorita nivelului de vulnerabilitate scazut
 
 Tehnologii folosite
 -----------------------
