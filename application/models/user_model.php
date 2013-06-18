@@ -43,6 +43,8 @@ class User_model extends CI_Model {
 		$query_str = "INSERT INTO users (firstName,lastName,email,password) VALUES (?,?,?,?)";
 		$this -> db -> query($query_str, array($firstname, $lastname, $email, $password));
 	}
-
+	public function insertIntoCouch($document){
+		echo $document;
+	}
 }
 ?>

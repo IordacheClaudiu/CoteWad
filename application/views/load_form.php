@@ -1,39 +1,21 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
-"http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-	
-  <title>CoteWad</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=9">
-
-  <!-- Load the Realtime libraries. -->
-  <script type="text/javascript"
-          src="https://apis.google.com/js/api.js"></script>
-
-  <!-- Load the utility library. -->
-  <script type="text/javascript"
-          src="<?php echo base_url()?>js/realtime-client-utils.js"></script>
-   <link rel="stylesheet" href="<?php echo base_url();?>css/editing_page_styles.css" type="text/css" media="screen"/>
-
-</head>
-
-
 <!-- Start Realtime when the body has loaded. -->
-<body onLoad='startRealtime()'>
+<body onload="startRealtime()">
 
 <div class="topbar">
         <div class="top-container">
-         
-          <h1>CoteWad</h1>
-          <button id="logoutButton">Logout</button>
-          <button id="githubButton">GitHub for this App</button>  
+          <h1>CoteWad</h1>     
+          <form action="signout" method="post">
+          <button class="button">Logout</button>
+          </form>
+          <button class="button" onclick="window.location.href='https://github.com/IordacheClaudiu/CoteWad'">GitHub for this App</button>  
       </div>
 </div>
-
+<div id="left_container">
 <div class="docviewer">
   <p>Aici vin toate documentele la care are acces puse cu un script php</p>
 </div>
-
+<button id="createButton" type="submit">Create Document</button>
+</div>
   <button id="authorizeButton" disabled>You must authorize</button>
 
   <!-- Text area that will be used as our collaborative controls. -->
@@ -145,5 +127,3 @@
     }
 
   </script>
-</body>
-</html>

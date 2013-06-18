@@ -13,4 +13,21 @@ class Collab extends CI_Controller{
 			redirect('login');
 		}
 	}
+	function createNewDocument(){
+		$data['main_content_collab']='load_form';
+		$this->load->view('includes/template_collab',$data);
+	}
+	function noLoad(){
+		$data['main_content_collab']='no_load_form';
+		$this->load->view('includes/template_collab',$data);
+	}
+	function signout(){
+		$this->session->sess_destroy();
+		redirect('login');
+	}
+	function addDocument(){
+		$this->load->model('user_model');
+		$insert= $this->user_model->insertIntoCouch($this->input->post('newDocument'));
+		//redirect($this->input->post('newDocument'));
+	}
 }
