@@ -3,31 +3,41 @@
 
 <div class="topbar">
         <div class="top-container">
-          <h1>CoteWad</h1>     
+          <h1>CoteWad</h1>
           <form action="signout" method="post">
-          <button class="button">Logout</button>
+          <button class="button" type="submit">Logout</button>
           </form>
-          <button class="button" onclick="window.location.href='https://github.com/IordacheClaudiu/CoteWad'">GitHub for this App</button>  
+          <button class="button" type="submit" onclick="window.location.href='https://github.com/IordacheClaudiu/CoteWad'">GitHub for this App</button>  
       </div>
 </div>
 <div id="left_container">
 <div class="docviewer">
   <p>Aici vin toate documentele la care are acces puse cu un script php</p>
+  <p>Aici vin toate documentele la care are acces puse cu un script php</p>
+  <p>Aici vin toate documentele la care are acces puse cu un script php</p>
+  <p>Aici vin toate documentele la care are acces puse cu un script php</p>
+  <p>Aici vin toate documentele la care are acces puse cu un script php</p>
+  <p>Aici vin toate documentele la care are acces puse cu un script php</p>
+  <p>Aici vin toate documentele la care are acces puse cu un script php</p>
+  <p>Aici vin toate documentele la care are acces puse cu un script php</p>
 </div>
-<button id="createButton" type="submit">Create Document</button>
+	<form action="createNewDocument" method="post">
+    <button id="createButton" type="submit">Create Document</button>
+    </form>
 </div>
+
   <button id="authorizeButton" disabled>You must authorize</button>
 
+<div id="right_container">
   <!-- Text area that will be used as our collaborative controls. -->
   <textarea id="editor" rows="15" cols="50" disabled="true"></textarea>
-  <br />
-
+</div>
   
   <div class="bottom-container">
   <!-- Undo and redo buttons. -->
-  <button id="undoButton" disabled>Undo</button>
-  <button id="redoButton" disabled>Redo</button>
-  <button id="saveButton">Save</button>
+  	<button id="undoButton" disabled>Undo</button>
+  	<button id="redoButton" disabled>Redo</button>
+  	<button id="saveButton" >Save</button>
   </div>
   
   
@@ -43,6 +53,17 @@
     function initializeModel(model) {
       var string = model.createString('Hello Realtime World!');
       model.getRoot().set('text', string);
+      var url=window.location;
+      var dataString="url="+url;
+      $.ajax({
+           type: "POST",
+            url: "http://localhost/projects/CoteWad/index.php/collab/storeURL",
+            data: dataString,
+			dataType:'text',
+			success: function(data) {	
+				}
+				
+        });
     }
 
     /**

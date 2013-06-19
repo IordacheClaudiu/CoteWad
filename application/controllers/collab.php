@@ -10,7 +10,7 @@ class Collab extends CI_Controller{
 	function is_loggedin(){
 		$log_status=$this->session->userdata('is_logged_in');
 		if(!isset($log_status) || $log_status!=TRUE){
-			redirect('login');
+			redirect('index.php/login');
 		}
 	}
 	function createNewDocument(){
@@ -23,11 +23,15 @@ class Collab extends CI_Controller{
 	}
 	function signout(){
 		$this->session->sess_destroy();
-		redirect('login');
+		redirect('index.php/login');
 	}
 	function addDocument(){
 		$this->load->model('user_model');
 		$insert= $this->user_model->insertIntoCouch($this->input->post('newDocument'));
 		//redirect($this->input->post('newDocument'));
+	}
+	function storeURL(){
+		$this->load->model('document_model');
+		$this->document_model->insert($this->input->post('url'));
 	}
 }

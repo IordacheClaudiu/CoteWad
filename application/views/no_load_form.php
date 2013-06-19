@@ -22,7 +22,9 @@
   <p>Aici vin toate documentele la care are acces puse cu un script php</p>
   
 </div>
+	<form action="createNewDocument" method="post">
     <button id="createButton" type="submit">Create Document</button>
+    </form>
 </div>
 
   <button id="authorizeButton" disabled>You must authorize</button>
@@ -52,6 +54,18 @@
     function initializeModel(model) {
       var string = model.createString('Hello Realtime World!');
       model.getRoot().set('text', string);
+      var url=window.location;
+      var dataString="url="+url;
+       console.log(dataString);
+      $.ajax({
+           type: "POST",
+            url: "http://localhost/projects/CoteWad/index.php/collab/storeURL",
+            data: dataString,
+			dataType:'text',
+			success: function(data) {	
+				}
+				
+        });
     }
 
     /**
