@@ -3,7 +3,7 @@
 
 Collaborative Application
 
-* Alexandroaie Robert : robert.alexandroaie@info.uaic.ro
+* Alexandroaie Robert : george.alexandroaie@info.uaic.ro / robert.alexandroaie@gmail.com
 * Atomei Alexandru    : alexandru.atomei@info.uaic.ro
 * Iordache Claudiu    : claudiu.iordache@info.uaic.ro
 
@@ -93,6 +93,13 @@ Arhitectura aplicației
 
 Detalii de implementare 
 --------------------------
+
+####1 Concepte utilizate
+*AJAX
+*Real-Time
+*Colaborative editing
+*
+
 
 Concluzii 
 --------------------------
