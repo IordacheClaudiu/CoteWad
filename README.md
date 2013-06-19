@@ -57,13 +57,37 @@ Principalele limbaje programatice folosite sunt PHP, JavaScript, HTML5, CSS3.
 
 
 ####1.2.1 PHP
-PHP este un limbaj foarte cunoscut folosit in dezvoltarea aplicaitilor web pe parttea de server
+PHP este un limbaj foarte cunoscut folosit in dezvoltarea aplicaitilor web pe partea de server. Este un limbaj interpretat (este nevoie de un procesor PHP).
+Mai multe detalii despre versiunile acestui limbaj, sintaxa si implementari, accesati [aceasta pagina](https://en.wikipedia.org/wiki/PHP).
 
-####1.2. JavaScript
+####1.2.2 JavaScript
+JavaScript este un limbaj de programare interpretat si implementat original ca parte a browserelor web pentru a oferi suport asincron pentru scripturile client.
+Accesati [aceast link](https://en.wikipedia.org/wiki/JavaScript) pentru mai multe detalii.
 
-####1.2. HTML5
 
-####1.2. CSS3
+####1.2.3 HTML5
+HTML5 este limbajul actualizat de marcare folosit pentru structurarea documentelor utilizate in web.
+[Detalii](https://en.wikipedia.org/wiki/HTML5)
+
+
+####1.2.4 CSS3
+CSS3 este un limbaj folosit in descrierea prezentarii unui fisier (construit prin limbaj de marcare). 
+Detalii despre versiunile precedente, cea actuala si cea in curs de dezvoltare le puteti gasi accesand [aceasta pagina](https://en.wikipedia.org/wiki/CSS3#CSS_3).
+
+####1.3 Alte unelte folosite
+Pentru eficientizarea lucrului in echipa si structurarea aplicatiei am folosit un aplicatie web de gazduire numit GitHub si framework-ul Codeigniter, pentru PHP.
+
+
+####1.3.1 GitHub
+GitHub este un serviciu web pentru gazduirea proiectelor gratuit sau platit, diferentiere facandu-se pe baza dreptului de acces la proiectele gazduite (publice sau private). Aplicatia dispunde si de un client local pentru Windows, de asemenea folosit.
+GitHub este folosit de aplicatia noastra si pentru gazduirea documentatiei.
+Detalii [aici](https://en.wikipedia.org/wiki/GitHub).
+
+
+####1.3.2 Codigniter
+Codeigniter este un framework open source pentru dezvoltarea aplicatiilor web dinamice, in limbajul PHP. Ofera o multime de librarii care faciliteaza dezvoltarea si structurarea aplicatiilor.
+[Pagina wiki](https://en.wikipedia.org/wiki/Codeigniter) aferenta.
+
 Arhitectura aplicației
 --------------------------
 
