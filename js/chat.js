@@ -16,7 +16,7 @@ $(document).ready(function() {
 			return false;
 		}
 
-		$.post(base_url + "index.php/chat/ajax_add_chat_message", {chat_message_content : chat_message_content, chat_id : chat_id, user_id : user_id}, function(data) {
+		$.post(base_url + "index.php/collab/ajax_add_chat_message", {chat_message_content : chat_message_content, chat_id : chat_id, user_id : user_id}, function(data) {
 			if(data.status == 'ok') {
 				var current_content = $("div#chat_viewport").html();
 				
@@ -33,7 +33,7 @@ $(document).ready(function() {
 	});
 	
 	function get_chat_messages() {
-		$.post(base_url+'index.php/chat/ajax_get_chat_messages',{chat_id:chat_id}, function(data){
+		$.post(base_url+'index.php/collab/ajax_get_chat_messages',{chat_id:chat_id}, function(data){
 			if(data.status == 'ok') {
 				var current_content = $("div#chat_viewport").html();
 				
