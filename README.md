@@ -97,9 +97,9 @@ Detalii de implementare
 --------------------------
 
 ####1 Concepte utilizate
-*AJAX
-*Real-Time
-*Colaborative editing
+* AJAX
+* Real-Time
+* Colaborative editing
 *
 
 
