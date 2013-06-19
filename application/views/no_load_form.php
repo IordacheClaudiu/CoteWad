@@ -8,14 +8,14 @@
 	<div id="boxpopup" class="box">
 		<a onclick="closeOffersDialog('boxpopup');" class="boxclose"></a>
 		<a onclick="openOffersDialog('boxpopup');" class="boxopen"></a>
-		<div id="content">			
+		<div id="content">
 			<?php $this->load->view($page_content)?>
 		</div>
 	</div>
 
 	<div class="topbar">
 		<div class="top-container">
-			<h1>CoteWad</h1>
+			<a id="headerTitle" href="<?php echo base_url()?>index.php/welcome">CoteWad</a>
 			<form action="signout" method="post">
 				<button class="button" type="submit">
 					Logout
