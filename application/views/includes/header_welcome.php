@@ -29,8 +29,8 @@
 					<button class="button" type="submit" >
 						Contact
 					</button>
-				</form>
-				<h1>CoteWad</h1>
+				</form>				
+				<a id="headerTitle" href="<?php echo base_url()?>index.php/welcome">CoteWad</a>
 			</div>
 		</div>
 		<div id="content">
