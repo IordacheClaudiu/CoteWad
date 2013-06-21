@@ -198,6 +198,14 @@ input[type=submit]:hover, form a:hover {
 	background: #0099FF;
 	width: 300px;
 }
+#exists,#exists_email{
+	background-image: url('x.png');
+	background-size:100%;
+	background-repeat: no-repeat;
+	width: 40px;
+	height: 40px;
+	visibility:hidden;	
+}
 .error {
 	color: #393939;
 	font-size: 15px;
