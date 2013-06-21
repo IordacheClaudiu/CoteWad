@@ -1,3 +1,7 @@
+* {
+	margin: 0;
+	padding: 0;
+}
 body {
 	background-color: #8b8989;
 	margin: 0;
@@ -8,6 +12,126 @@ body {
 	color: #404040;
 }
 
+a {
+	color: #404040;
+	text-decoration: none;
+}
+
+a:hover {
+	font-size: 20pt;
+}
+
+br.clear {
+	clear: both;
+}
+
+#bg {
+	overflow: hidden;
+}
+
+#maincontent {
+	width: 1000px;
+	margin: 0;
+}
+
+#copyright {
+	position: relative;
+	text-align: center;
+	padding: 8px 0 20px 0;
+	color: #404040;
+	text-shadow: 0 1px 0 #101010;
+	background-color: #222222;
+}
+
+#copyright a {
+	color: #404040;
+}
+
+#header {
+	position: relative;
+	padding: 32px;
+	height: 60px;
+	background-color: #222222;
+	border-radius: 25px;
+}
+
+#logo {
+	position: absolute;
+	top: 32px;
+	right: 100px;
+	height: 130px;
+	line-height: 130px;
+}
+
+#logo a {
+	text-decoration: none;
+	color: #ffffff;
+	text-shadow: 0 2px 2px #000000;
+}
+
+#logo h1 {
+	font-size: 3em;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+#main {
+	position: relative;
+	padding: 20px 32px 24px 32px;
+	width: 1116px;
+}
+
+#main ul {
+	list-style: none;
+}
+
+#nav {
+	position: absolute;
+	height: 50px;
+	line-height: 50px;
+	top: 75px;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-size: 1.4em;
+	padding: 0 1em 0 1em;
+}
+
+#nav a {
+	text-decoration: none;
+	color: #ffffff;
+	text-shadow: 0 2px 1px #3F1C1C;
+}
+
+#nav li {
+	margin: 0 1em 0 1em;
+}
+
+#nav ul {
+	list-style: none;
+}
+
+#nav ul li {
+	float: left;
+}
+
+#outer {
+	position: relative;
+	width: 1180px;
+	margin: 0 auto 0 auto;
+	overflow: hidden;
+}
+
+#megalogo {
+	width: 400px;
+	height: auto;
+}
+#header_background {
+	overflow: hidden;
+	z-index: -100;
+	height: 114px;
+	width: 100%;
+	background-color: #222222;
+	position: absolute;
+}
+
 textarea#editor {
 	border: 2px solid #CCCCCC;
 	border-radius: 10px;
@@ -16,60 +140,96 @@ textarea#editor {
 	box-shadow: 10px 10px 5px #888888;
 	-webkit-box-shadow: 10px 10px 5px #888888;
 	-moz-box-shadow: 10px 10px 5px #888888;
-	min-width: 100%;
-	min-height: 400px;
-	max-width: 100%;
-	max-height: 400px;
+	width: 100%;
+	height: 300px;
 }
 
-#headerTitle {
-	float: right;
+#left_container {
 	position: relative;
-	font-weight: bold;
-	color: #bfbfbf;
-	font-size: 45px;
+	float: left;
+	margin-right: 30px;
+	width: 30%;
+}
+#right_container {
+	position: relative;
+	float: left;
+	width: 67%;
+}
+
+.box {
+	position: absolute;
+	background-color: #ffffff;
+	color: #222222;
+	height: 70%;
+	left: 99%;
+	padding: 10px;
+	right: 30%;
+	top: 13%;
+	width: 300px;
+	z-index: 10001;
+	border: 5px solid #888888;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	margin-top: 50px;
+}
+
+#chat_content {
+	width: 100%;
+	height: 90%;
+	overflow: scroll;
+}
+
+#chat_content > ul {
+	list-style: none;
+	margin-left: -10px;
+}
+
+#chat_content > ul > li {
+	margin-top: 5px;
+}
+
+#chat_content > ul > li > a {
+	cursor: pointer;
+	font-size: 12px;
 	text-decoration: none;
-	margin-right: 3%;
-	margin-top: 25px;
 }
 
-#headerTitle:hover {
-	color: #FFFFFF;
+#chat_content > ul > li > a:hover {
+	cursor: pointer;
+	font-size: 12px;
 }
 
-.topbar {
-	position: relative;
-	height: 90px;
-	position: fixed;
-	top: 0;
+.overlay {
+	background: #000000;
+	bottom: 0;
 	left: 0;
+	position: fixed;
 	right: 0;
-	z-index: 10000;
-	overflow: visible;
-	background-color: #222222;
+	top: 0;
+	z-index: 100;
+	opacity: 0.5;
 }
 
-.topbar h1 {
+a.boxclose {
+	background: url("right2.png") repeat scroll left top transparent;
+	cursor: pointer;
 	float: right;
 	position: relative;
-	font-weight: bold;
-	color: #bfbfbf;
-	font-size: 40px;
-	margin-right: 3%;
-	margin-top: 20px;
+	height: 26px;
+	left: 30px;
+	top: -33px;
+	width: 26px;
 }
 
-.top-container {
+a.boxopen {
+	background: url("left2.png") repeat scroll left top transparent;
+	cursor: pointer;
+	float: left;
+	height: 26px;
+	left: -33px;
 	position: relative;
-	width: 80%;
-	margin-left: auto;
-	margin-right: auto;
-	zoom: 1;
-	margin-top: 10px;
-}
-.menu {
-	float: right;
-	margin-left: 10px;
+	top: -33px;
+	width: 26px;
 }
 
 .button {
@@ -91,15 +251,14 @@ textarea#editor {
 }
 
 .docviewer {
-	min-width: 98%;
-	max-width: 98%;
-	min-height: 400px;
-	max-height: 400px;
+	position: relative;
 	float: left;
 	background-color: transparent;
 	border-style: solid;
 	border-color: #222222;
 	border-radius: 7px;
+	overflow: scroll;
+	max-height: 60%;
 }
 
 .docviewer a {
@@ -118,22 +277,6 @@ textarea#editor {
 	padding-right: 15px;
 }
 
-#right_container {
-	float: right;
-	margin-right: 20px;
-	margin-top: 120px;
-	min-width: 70%;
-	max-width: 70%;
-}
-
-#left_container {
-	float: left;
-	margin-left: 20px;
-	margin-top: 120px;
-	min-width: 25%;
-	max-width: 25%;
-}
-
 #undoButton, #redoButton, #saveButton, #createButton, #refreshButton {
 	position: relative;
 	background-color: #222222;
@@ -148,9 +291,7 @@ textarea#editor {
 	float: right;
 	margin-right: 20px;
 	margin-top: 20px;
-	min-width: 70%;
 	max-width: 70%;
-	margin-bottom: 40px;
 }
 
 .bottom-container-left {
@@ -158,23 +299,9 @@ textarea#editor {
 	float: left;
 	margin-left: 20px;
 	margin-top: 20px;
-	min-width: 25%;
 	max-width: 25%;
-	margin-bottom: 40px;
 }
 
-div#footer {
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-	height: 60px;
-	background-color: #222222;
-	z-index: 1000;
-	color: #bfbfbf;
-	text-align: center;
-}
-
-/* Loading Circle */
 .ball {
 	background-color: rgba(0,0,0,0);
 	border: 5px solid rgba(0,183,229,0.9);
@@ -227,85 +354,9 @@ div#footer {
 
 .content {
 	background: #161616 url(pattern_40.gif) top left repeat;
-	height: 400px;
 	border-style: solid;
 	border-color: #161616;
 	border-radius: 7px;
-}
-
-.box {
-	background-color: #ffffff;
-	color: #888888;
-	height: 80%;
-	left: 99%;
-	padding: 20px;
-	position: fixed;
-	right: 30%;
-	top: 13%;
-	width: 354px;
-	z-index: 10001;
-	border: 5px solid #888888;
-	border-radius: 10px;
-	-moz-border-radius: 10px;
-}
-
-#content {
-	width: 100%;
-	height: 90%;
-	overflow: scroll;
-}
-
-#content > ul {
-	list-style: none;
-	margin-left: -10px;
-}
-
-#content > ul > li {
-	margin-top: 5px;
-}
-
-#content > ul > li > a {
-	cursor: pointer;
-	font-size: 12px;
-	text-decoration: none;
-}
-
-#content > ul > li > a:hover {
-	cursor: pointer;
-	font-size: 12px;
-	text-decoration: underline;
-}
-
-.overlay {
-	background: #000000;
-	bottom: 0;
-	left: 0;
-	position: fixed;
-	right: 0;
-	top: 0;
-	z-index: 100;
-	opacity: 0.5;
-}
-
-a.boxclose {
-	background: url("right2.png") repeat scroll left top transparent;
-	cursor: pointer;
-	float: right;
-	position: relative;
-	height: 26px;
-	left: 30px;
-	top: -33px;
-	width: 26px;
-}
-
-a.boxopen {
-	background: url("left2.png") repeat scroll left top transparent;
-	cursor: pointer;
-	float: left;
-	height: 26px;
-	left: -33px;
-	position: relative;
-	top: -33px;
-	width: 26px;
+	width: 200px;
 }
 

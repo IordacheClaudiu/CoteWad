@@ -66,7 +66,7 @@ class Collab extends CI_Controller {
 
 	public function getUserID() {
 
-		$query_str = "SELECT * FROM users where firstName=?";
+		$query_str = "SELECT * FROM users where username=?";
 		$result = $this -> db -> query($query_str, $this -> session -> userdata('username'));
 		if ($result -> num_rows() == 1) {
 			foreach ($result->result() as $user) {
@@ -101,7 +101,7 @@ class Collab extends CI_Controller {
 
 			$chat_messages_html = '<ul>';
 			foreach ($chat_messages->result() as $chat_message) {
-				$query_str = "SELECT * FROM users where firstName=?";
+				$query_str = "SELECT * FROM users where username=?";
 				$result = $this -> db -> query($query_str, $this -> session -> userdata('username'));
 				if ($result -> num_rows() == 1) {
 					foreach ($result->result() as $user) {
@@ -109,7 +109,7 @@ class Collab extends CI_Controller {
 					}
 				}
 
-				$chat_messages_html .= '<li ' . $li_class . '><span class="chat_message_header">' . $chat_message -> chat_message_timestamp . ' by ' . $chat_message -> firstName . '</span><p class="message_content">' . $chat_message -> chat_message_content . '</p></li>';
+				$chat_messages_html .= '<li ' . $li_class . '><span class="chat_message_header">' . $chat_message -> chat_message_timestamp . ' by ' . $chat_message -> username . '</span><p class="message_content">' . $chat_message -> chat_message_content . '</p></li>';
 			}
 
 			$chat_messages_html .= '</ul>';

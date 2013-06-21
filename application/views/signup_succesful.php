@@ -1,1 +1,1 @@
-<p>Your Account has been created.<?php echo anchor('login','Login Now') ?></p>
+<p>Your Account has been created.<?php echo anchor('index.php/login','Login Now') ?></p>

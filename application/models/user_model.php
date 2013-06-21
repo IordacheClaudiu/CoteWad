@@ -9,21 +9,35 @@ class User_model extends CI_Model {
 	}
 
 	public function getUserByUserName() {
-		$query_str = "SELECT * FROM users where firstName=?";
+		$query_str = "SELECT * FROM users where username=?";
 		$result = $this -> db -> query($query_str, $this -> input -> post('username'));
 		if ($result -> num_rows() == 1) {
 			foreach ($result->result() as $user) {
-				$this -> view_data['user_id'] = $user->user_id;	
+				$this -> view_data['user_id'] = $user -> user_id;
 			}
 		}
 	}
 
+	public function exists($user) {
+		$query = $this -> db -> get_where('users', array('username' => $user));
+		foreach ($query->result() as $row) {
+			return "TRUE";
+		}
+		return "FALSE";
+	}
+
+	public function exists_email($email) {
+		$query = $this -> db -> get_where('users', array('email' => $email));
+		foreach ($query->result() as $row) {
+			return "TRUE";
+		}
+		return "FALSE";
+	}
+
 	public function validate() {
-		$query_str = "SELECT password FROM users where firstName=?";
-		$result = $this -> db -> query($query_str, $this -> input -> post('username'));
+		$result = $this -> db -> get_where('users', array('username' => $this -> input -> post('username')));
 		if ($result -> num_rows() == 1) {
 			foreach ($result->result() as $user) {
-
 				if (md5($this -> input -> post('password')) == $user -> password) {
 					return TRUE;
 				} else {
@@ -41,10 +55,12 @@ class User_model extends CI_Model {
 		$email = $this -> input -> post('email_adress');
 		$password = md5($this -> input -> post('password'));
 		$query_str = "INSERT INTO users (firstName,lastName,email,password) VALUES (?,?,?,?)";
-		$this -> db -> query($query_str, array($firstname, $lastname, $email, $password));
+		return $this -> db -> query($query_str, array($firstname, $lastname, $email, $password));
 	}
-	public function insertIntoCouch($document){
+
+	public function insertIntoCouch($document) {
 		echo $document;
 	}
+
 }
 ?>

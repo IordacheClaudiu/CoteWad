@@ -1,12 +1,13 @@
+	
+					</div>
+					<br class="clear" />
+				</div>
+			
+			
+		</div>
 	</div>
-	<div id="logo">
-		
-	</div>
-	</div>
-	<div id="footer">
-	<footer>
-		<p>&copy; Iordache Claudiu-George, Alexandroaie Robert-George, Atomei Alexandru-Constantin</p>
-	</footer>
-</div>
-</body>
+	<div id="copyright">
+				&copy; Alexandroaie Robert | Atomei Alexandru | Iordache Claudiu
+			</div>
+	</body>
 </html>

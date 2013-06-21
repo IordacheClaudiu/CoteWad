@@ -21,7 +21,7 @@ class Document_model extends CI_Model {
 		}
 
 		$client = new couchClient("http://localhost:5984/", "users");
-		$query_str = "SELECT * FROM users where firstName=?";
+		$query_str = "SELECT * FROM users where username=?";
 		$result = $this -> db -> query($query_str, $this -> session -> userdata('username'));
 		if ($result -> num_rows() == 1) {
 			foreach ($result->result() as $user) {

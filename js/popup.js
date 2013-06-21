@@ -10,7 +10,7 @@ function closeOffersDialog(prospectElementID) {
 		$(document).ready(function() {
 			$('#' + prospectElementID).css('position','absolute');
 			$('#' + prospectElementID).animate({'left':'98%'}, 500, function() {
-				$('#' + prospectElementID).css('position','fixed');
+				$('#' + prospectElementID).css('position','absolute');
 				$('#' + prospectElementID).css('left','98%');
 				$('#overlay').fadeOut('fast');
 			});

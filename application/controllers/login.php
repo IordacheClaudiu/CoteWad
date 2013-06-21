@@ -29,4 +29,8 @@ class Login extends CI_Controller{
 			$this->index();
 		}
 	}
+	public function exists(){
+		$this->load->model('user_model');
+		echo $this->user_model->exists($this->input->post('user'));
+	}
 }
