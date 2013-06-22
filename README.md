@@ -1,4 +1,4 @@
---work in progress--
+[Video Demo](https://www.dropbox.com/s/2glaq0afumgxci4/Cotewad.avi)
 
 #CoteWad
 
